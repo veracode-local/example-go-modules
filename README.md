@@ -11,5 +11,6 @@ There are 2 ways to scan this project.
 ### 2. On local path
 ```
 1. git clone https://github.com/srcclr/example-go-goget/ $GOPATH/src/github.com/srcclr/example-go-goget/
-2. srcclr scan $GOPATH/src/github.com/srcclr/example-go-goget/
+2. cd $GOPATH/src/github.com/srcclr/example-go-goget/ && go get -d ./...
+2. srcclr scan .
 ```
