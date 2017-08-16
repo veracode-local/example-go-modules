@@ -2,6 +2,7 @@ package sub
 
 import "strconv"
 import "fmt"
+import "context"
 import "crypto/rsa"
 import "crypto/rand"
 import "github.com/google/go-github/github"
@@ -12,7 +13,7 @@ func Foo() {
 
     // list public repositories for org "github"
     opt := &github.RepositoryListByOrgOptions{Type: "public"}
-    repos, _, _ := client.Repositories.ListByOrg("github", opt)
+    repos, _, _ := client.Repositories.ListByOrg(context.Background(), "github", opt)
 
     fmt.Println("Hello from sub! Num repos: " + strconv.Itoa(len(repos)))
 
