@@ -21,12 +21,6 @@ func Foo() {
         panic(err)
     }
 
-    publicKey := &privateKey.PublicKey
-    encrypter, err := jose.NewEncrypter(jose.RSA_OAEP, jose.A128GCM, publicKey)
-    if err != nil {
-        panic(err)
-    }
-
     var plaintext = []byte("Lorem ipsum dolor sit amet")
     object, err := encrypter.Encrypt(plaintext)
     if err != nil {
