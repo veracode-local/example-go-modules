@@ -6,7 +6,6 @@ import "context"
 import "crypto/rsa"
 import "crypto/rand"
 import "github.com/google/go-github/github"
-import "github.com/square/go-jose"
 
 func Foo() {
     client := github.NewClient(nil)
