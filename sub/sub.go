@@ -16,16 +16,11 @@ func Foo() {
 
     fmt.Println("Hello from sub! Num repos: " + strconv.Itoa(len(repos)))
 
-    privateKey, err := rsa.GenerateKey(rand.Reader, 2048)
+    _, err := rsa.GenerateKey(rand.Reader, 2048)
     if err != nil {
         panic(err)
     }
 
     var plaintext = []byte("Lorem ipsum dolor sit amet")
-    object, err := encrypter.Encrypt(plaintext)
-    if err != nil {
-        panic(err)
-    }
-
-    fmt.Println(object)
+    fmt.Println(plaintext)
 }
