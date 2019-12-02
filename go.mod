@@ -1,4 +1,4 @@
-module git.ci.srcclr.io/andrew/example-go-modules
+module github.com/srcclr/example-go-modules
 
 go 1.12
 
