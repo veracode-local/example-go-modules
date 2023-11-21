@@ -17,4 +17,4 @@ There are 2 ways to scan this project.
 2. cd example-go-modules
 3. srcclr scan .
 ```
-test 1234
+test 12345
